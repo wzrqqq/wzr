@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+		/*var arr=[2,4,97,3,1];
+		push(arr,23,4,21);
+		function push(arr){
+			for(i=0;i<arguments.length;i++){
+				arr[arr.length]=arguments[i];
+			}
+		}
+		document.write(arr);*/
+			
+			
+			
+		/*var arr = [4,2,7,4,2,4];
+		push(arr,99,99,99,99,99)
+		function push(arr){
+			for (var i=0;i<arguments.length;i++) {
+				arr[arr.length] = arguments[i];
+			}
+		}
+		document.write(arr);*/
+			
+		/*var arr = [1,2,3,,4,,5,,6,,7,,8,9]	
+		var newarr = [];
+		for (var i=0;i<arr.length;i++) {
+			if (arr[i] != undefined) {
+				newarr[newarr.length] = arr[i];
+			}
+		}
+		console.log(newarr);*/
+		
+		
+		var arr=[2,4,97,3,1];
+		push(arr,23,4,21);
+		function push(arr,...value){
+			for(i=0;i<value.length;i++){  
+				arr[arr.length]=value[i];
+			}
+		}
+		document.write(arr);
+		
+		
+		
+		
+		
+		
+		/*arr=[1,2,3,4,5,6,7];
+        var ig=exist(arr,7);
+        alert(ig);
+        function exist(arr,value){
+        	for(i=0;i<arr.length;i++){
+        		if(arr[i]==value){
+        			return true;
+        		}
+        	}
+        	return false;
+        }*/
+       
+       
+       
+       
+       
+       
+       
+		</script>
+	</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>执行流程</title>
+	</head>
+	<body>
+		
+		<script>
+//			var num = -10;
+//			if (num > 0) {
+//				alert(1);
+//			}
+
+
+//			num 正数   弹true
+//				非整数   弹false
+//			if (num>0) {
+//				alert(true);
+//			}else{
+//				alert(false);
+//			}
+
+			
+//			0~100
+//			优 90~100  
+//			良 80~90
+//			中 70~80
+//			及格 60~70
+//			不及格 0~60
+//			努力50~60
+//			多努力30~50
+//			放弃吧0~30
+			
+//			var score = prompt('请输入你的成绩',60);
+//			if (score >= 90 && score <= 100) {
+//				alert('优秀');
+//			}else if (score >= 80 && score <90) {
+//				alert('良好');
+//			}else if (score >= 70 && score <80) {
+//				alert('中');
+//			}else if (score >= 60 && score <70) {
+//				alert('及格');
+//			}else if (score >= 0 && score <60) {
+//				if (score>=50) {
+//					alert('努力一点');
+//				} else if (score >= 30 && score < 50){
+//					alert('再多努力一点');
+//				}else{
+//					alert('该干哈干哈去');
+//				}
+//			}else{
+//				alert('输入错误');
+//			}
+			
+				
+//			练习
+//			var num = 10;
+//			if (num > 0) {
+//				alert(1);
+//			}
+			
+//			var num = prompt('请输入数字',0);
+//			if (num>0) {
+//				alert('正数');
+//			}else{
+//				alert('负数');
+//			}
+
+
+//			var score = prompt('请输入成绩',60);
+//			if (score >= 90 && score <= 100) {
+//				alert('优秀');
+//			} else if(score >= 70 && score <90){
+//				alert('良好');
+//			}else if(score >=60 && score <70){
+//				alert('及格');
+//			}else if(score >=0 && score <60){
+//				alert('不及格');
+//			}else{
+//				alert('请重新输入');
+//			}
+
+
+//			var a = prompt('请输入数值',1);
+//			if (a=10) {
+//				alert(a);
+//			}
+
+
+
+
+
+
+
+
+//		switch
+//		1	一组
+//		2	二组
+//		3	三组
+//		var week = prompt('请输入星期',1);
+//		switch(week){
+//			case '1' :
+//			  alert('一组');
+//			  break;
+//			case '2' :
+//		  	  alert('二组');
+//		  	  break;
+//			case '3' :
+//		  	  alert('三组');
+//		  	  break;
+//			case '4' :
+//			  alert('四组');
+//			  break;
+//			case '5' : 
+//			  alert('五组');
+//			  break;
+//			case '6' :
+//			  alert('六组');
+//			  break;
+//			case '7' :
+//			  alert('七组');
+//			  break;
+//			default:
+//			  alert('输入错误');
+//			break;
+//		}
+
+
+
+
+//		循环
+//		for (var i=1;i<=10;i++) {
+//			alert(1);
+//		}
+		
+//		for (var i=1;i<=10;i++) {
+//			alert(i);
+//		}
+		
+//		var sum = 0;
+//		for (var i=1;i<101;i++) {
+//			sum = sum + i;
+//		}
+//		console.log(sum);
+		
+//		var sum = 0;
+//		for (var n=1;n<101;n=n+2) {
+//			sum = sum + n;
+//			alert(sum);
+//		}
+
+//		for (var j=1;j<11;j++) {
+//			for (var i=1;i<11;i++) {
+//				document.write('*');
+//			}
+//			document.write('<br />');
+//		}
+
+
+		document.write('<table border=1 cellspacing=0>')
+			for (var i=1;i<=10;i++) {
+				document.write('<tr bgcolor=hotpink>')
+					for (var j=1;j<=i;j++) {
+						document.write('<td>'+i+'*'+j+'</td>')
+					}
+				document.write('</tr>')
+			}
+		document.write('</table>')
+		
+		
+		
+		
+		
+		
+		
+		</script>
+		
+		
+		
+	</body>
+</html>
