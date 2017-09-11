@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>object</title>
+	</head>
+	<body>
+		<script>
+			/*
+			心目中的女神 
+			*/
+			
+			//定义对象
+			//json
+			/*let zhangsan = {}
+			
+			console.log(typeof zhangsan );*/
+			//构造函数
+			function Person(){
+				
+			}
+			let zhangsan = new Person();
+			let lisi = new Person();
+//			alert(typeof zhangsan)
+			console.log(zhangsan);
+			//添加属性
+			//谁    什么   等于
+			zhangsan.age = 18;
+			zhangsan.name = 'zhangsan';
+			zhangsan.sex = '男';
+			zhangsan.weight = '70kg';
+			zhangsan.say = function(){
+				alert(zhangsan.name);
+			}
+			lisi.age = 24;
+			lisi.name = 'lisi2'
+			//访问
+			//谁     什么
+			/*alert(zhangsan.name);
+			alert(zhangsan.age);
+			alert(zhangsan.sex);
+			alert(zhangsan.weight);
+			alert(lisi.name);
+			alert(lisi.age);*/
+			zhangsan.say();
+			
+			
+			
+			/*let people = {};
+			people.one = 'zhangsan';
+			console.log(people.one);*/
+			
+		</script>
+	</body>
+</html>

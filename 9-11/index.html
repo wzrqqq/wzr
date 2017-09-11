@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//闭包
+		/*	function fn(){
+				var num = 10;
+				return fn1;
+				function fn1(){
+					num++;
+					return num;
+				}
+			}
+			var result = fn();//  fn1
+			//alert(result);
+			alert(result());*/
+			
+			//箭头参数
+			/*var fn = a =>a;
+			alert((1));*/
+			/*var fn = function(a){
+				return a;
+			}*/
+			/*var fn = (a,b) => {
+				alert(a-b);
+				alert(a+b);
+				return[a,b];
+			}
+			alert(fn(1,2));*/
+			//eg:
+			/*function map(arr,fn){
+				var newarr = [];
+				for (var i=0;i<arr.length;i++) {
+					newarr[newarr.length] = fn(arr[i]); 
+				}
+			}
+			var arr = [1,2,3,4,5,5];
+			var result = map(arr,function(value){
+				return value - 2;
+			});
+			var result1 = map(arr,(value) =>value-2);
+			console.log(result);
+			console.log(result1);*/
+			
+			
+			var fn = function(a,b){
+				return a+b;
+			}
+			var fn = (a,b) => a+b;
+			alert(fn(1,2));
+			
+			
+		</script>
+	</body>
+</html>

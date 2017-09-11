@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+//			var a = 10;
+			/*let num2 = 20;
+//			console.log(num2);
+			function fn(){
+				let num2 = 'a';
+				console.log(num2);
+			}
+			console.log(num2);
+			fn();*/
+		
+			//块级作用域
+			/*let num = 'abcd';
+			{
+				let num = 10;
+				{
+					let num = 20;
+					console.log(num);
+				}
+				console.log(num);
+			}
+			console.log(num);*/
+			
+			
+			/*var arr = [];
+			for (let i=0;i<10;i++) {
+				arr[i] = function(){
+					alert(i);
+				}
+			}
+			arr[2]();
+			arr[4]();
+			arr[5]();*/
+			/*let num = 'a';
+			function fn(){
+			    alert(num);//----'a'
+			  if(true){
+			      let num = 10;
+			    	alert(num);
+			  }
+			}
+			fn();*/
+			
+			
+			
+			
+			/*var num = 10;
+			function fn(){
+				alert(num);
+				if (true) {
+					var num = 20;
+					alert(num);
+				}
+			}
+			fn();*/
+			
+			
+			
+			//const声明变量
+			/*const pi = 3.14;
+//			pi = 1;
+			console.log(pi);*/
+			
+			
+			
+			//内置顶层函数
+			//let str = '100px';
+			
+			function pow(x){
+				return x*x;
+			}
+			var arr = [1,2,3,4,5,6,7,8,9];
+			console.log(arr.map(pow));
+			
+			
+		</script>
+	</body>
+</html>
