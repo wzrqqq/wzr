@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>原型对象</title>
+	</head>
+	<body>
+		<script>
+			
+			let zhangsan = new Person('zhangsan',18,'男');
+			let lisi = new Person('lisi',28,'女');
+			console.log(zhangsan);
+			//zhangsan.say('对象的方法传参');
+			//zhangsan.speech('演讲');
+			let arr = [1,2,3,4,5,6,7,8];
+			//console.log(arr);
+			function Person(name,age,sex){
+				this[1] = 'a';
+				this[2] = 'b';
+				this.name = name;
+				this.age = age;
+				this.sex = sex;
+				this.brain = `${this.name}的脑子`;
+				this.say = function(value){
+					alert(value);
+					
+				}
+				this.study = function(){
+					alert(this.brain);
+				}
+				this.speech = function(value){
+					this.say(value)
+				}
+			}
+			zhangsan.study();
+		</script>
+	</body>
+</html>

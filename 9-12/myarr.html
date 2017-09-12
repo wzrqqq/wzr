@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>my Array</title>
+	</head>
+	<body>
+		<script>
+			/*var arr = new Array('a','b','c','d');
+			console.log(arr);*/
+			
+			/*let arr = new myArray('a','b','c','d');
+			console.log(arr);
+			function myArray(){
+				//this[0] = arguments[0];
+				//this[1] = arguments[1];
+				for (let i=0;i<arguments.length;i++) {
+					this[i] = arguments[i];
+				}
+				this.length = arguments.length;
+			}*/
+			
+			//练习一
+			let arr = new myArray(1,9,7,4,8,6,'a','b','c','d');
+			console.log(arr);
+			//方法
+			arr.push('x','y','z');
+			let index = arr.indexOf('c');
+			let index1 = arr.lastIndexOf('z');
+			let result = arr.some(function(value){
+					return typeof value =='number';
+			});
+			let result1 = arr.includes('a');
+			let result2 = arr.reverse();
+			let result3 = arr.join('-');	
+			let result4 = arr.every(function(x){
+					return x > 0;
+			});
+			let result5 = arr.map(function(x){
+					return x*3;
+			});
+			let result6 = arr.filter(function(x){
+					return x%2 ==0;
+			});
+			console.log(index);		 //indexof
+			console.log(index1);	 //lastindexOf
+			console.log(result);	 //some
+			console.log(result1);    //includes
+			console.log(result2);	 //reverse
+			console.log(result3); 	 //join
+			arr.sortUP();
+			console.log(arr);		 //sortUP
+			console.log(result4);	 //every
+			console.log(result5);	 //map
+			console.log(result6); 	 //filter
+			function myArray(){
+				for (let i=0;i<arguments.length;i++) {
+					this[i] = arguments[i];
+				}
+				this.length = arguments.length;
+				this.push = function(){
+					for (let i=0;i<arguments.length;i++) {
+						this[this.length] = arguments[i];
+						this.length++;
+					}
+				}
+				//某一个数组元素首次出现的位置
+				this.indexOf = function(value){
+					for (let i=0;i<this.length;i++) {
+						if(this[i] == value){
+							return i;
+						}
+					}
+					return -1;
+				}
+				//某元素在数组中最后一次出现的位置
+				this.lastIndexOf = function(value){
+					for (i=this.length-1;i>=0;i--) {
+						if (this[i] == value) {
+							return i;
+						}
+					}
+					return -1;
+				}
+				//判断当前数组是否包含某个元素
+				this.some = function(fn){
+					for (let i=0;i<this.length;i++) {
+						if(fn(this[i])){
+							return true;
+						}
+					}
+					return false;
+				}
+				//数组中是否存在某个元素
+				this.includes = function(value){
+					for (let i=0;i<this.length;i++) {
+						if (this[i] == value) {
+							return true;
+						}
+					}
+					return false;
+				}
+				//将数组反转过来
+				this.reverse = function(){
+					var newarr = [];
+					for (i=this.length-1;i>=0;i--) {
+						newarr[newarr.length] = arr[i];
+					}
+					return newarr;
+				}
+				//将数组中的元素连接起来
+				this.join = function(str){
+					var newstr = '';
+					for (i=0;i<this.length;i++) {
+						if (i < this.length-1 ) {
+							newstr +=this[i]+str;	//newstr = newstr + this[i] + str
+						} else{
+				       	     	newstr += this[i];  
+				       	     }
+					}
+					return newstr;
+				}
+				//数组升序
+				this.sortUP = function(){
+					for (i=0;i<this.length;i++) {
+						for (j=i+1;j<this.length;j++) {
+							if (this[i] > this[j]) {
+								var temp = this[i];
+								this[i] = this[j];
+								this[j] =temp;
+							}
+						}
+					}
+				}
+				
+				//every
+				//所有元素都满足条件时，返回true，只要有一个不满足，就返回false
+				this.every = function(fn){
+					for (let i=0;i<this.length;i++) {
+						if (!fn(this[i])) {
+							return false;
+						}
+					}
+					return true;
+				}
+				
+				//map
+				//输出数组中所有元素的任意倍数
+				this.map = function(fn){
+					var newarr = [];    //不能放在for里面，会被覆盖
+					for (let i=0;i<this.length;i++) {
+						
+						newarr[newarr.length] = fn(this[i]);
+					}
+					return newarr;
+				}
+			
+				//filter
+				//输出任意数组中的奇数或偶数
+
+				this.filter = function(fn){
+					var newarr = [];
+					for (let i=0;i<this.length;i++) {
+						if (fn(this[i])) {
+							newarr[newarr.length] = this[i];
+						}
+					}
+					return newarr;
+				}
+			
+			
+			
+			
+			}
+			
+			
+/*indexOf   lastindexOf   includes是否存在       reverse是否反转     join    sort
+ 	some      every所有的都需要满足条件          map      filter筛选
+ * 
+ * */
+			/*class MyArray{
+				constructor(){
+					for (let j=0;j<arguments.length;j++) {
+						this[j] = arguments[j];
+					}
+					this.length = arguments.length;
+				}
+			}
+			let arr1 = new MyArray(1,2,3,4,'a','s','d');
+			console.log(arr1);
+			console.log(arr1.length);*/
+		</script>
+	</body>
+</html>
