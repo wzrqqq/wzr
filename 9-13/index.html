@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//原型  对象
+			function Person(){
+				this.name = 'zhangsan';
+				this.age = 18;
+				this.sex = 'nv;'
+				
+			}
+			Person.prototype = {
+				sleep : function(){
+					alert('休息');
+				},
+				hobby : '休息66',
+				say : function(){
+					alert('this.name');
+				},
+				play : function(){
+					alert(`${this.name}玩儿`);
+				},
+				//eat : function (){}
+			}
+			Person.prototype.eat = function(){
+				alert('eat');
+			}
+			let zhangsan = new Person();
+			let lisi = new Person();
+			/*delete zhangsan.sex;
+			alert(zhangsan.sex);*/
+			//lisi.eat();
+			/*zhangsan.eat = function(){
+				alert('aaaa');	
+			}
+			zhangsan.eat();*/
+			//console.log(zhangsan.sleep == lisi.sleep);   //true   内存中的地址一样
+			/*lisi.sleep();
+			alert(lisi.hobby);
+			zhangsan.sleep();
+			console.log(zhangsan);*/
+			/*console.log(zhangsan.say == lisi.say);   //false   比较的是在内存中的地址
+			console.log(zhangsan.say() == lisi.say());// undefined == undefined所以弹true
+			console.log([] == []);   //false   比较的是内存中存储的地址 
+			console.log(zhangsan == lisi);*///false   虽然方法都一样，但是在内存中存储的位置不一样
+				
+		</script>
+	</body>
+</html>

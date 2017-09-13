@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Student(){
+				this.name = 'student';
+			}
+			function Person(){
+				this.name = 'person';
+			}
+			let zhangsan = new Student();
+			let lisi = new Person();
+			console.log(zhangsan instanceof Student);
+			console.log(lisi instanceof Student);
+			let arr = [];
+			console.log(arr instanceof Array);
+		</script>
+	</body>
+</html>

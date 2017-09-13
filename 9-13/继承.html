@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>继承</title>
+	</head>
+	<body>
+		<script>
+			function Person(){
+				this.name = 'person';
+				this.age = 19;
+				this.sex = 'nan';
+				this.eat = function(){
+					alert('eat');
+				}
+				this.sleep = function(){
+					alert('sleep');
+				}
+				/*this.aa = function(){
+					alert('Person构造函数的aa');
+				}*/
+				
+			}
+			/*Person.prototype = {
+				aa : function(){
+					alert('person原型对象的aa');
+				}
+			}*/
+			function Student(){
+				this.classes = 'WUIF1707-1';
+				this.number = '201408110031';
+				this.skill = function(){
+					alert('fulllStuck');
+				}
+				/*this.aa = function(){
+					alert('Student构造函数的aa');
+				}*/
+			}
+			
+			Student.prototype = new Person();
+			Student.prototype.aa = function(){
+					alert('student原型对象的aa');
+			}
+			let zhangsan = new Person();
+			let lisi = new Student();
+		/*	console.log(lisi.__proto__ == Student.prototype);
+			console.log(Student.prototype.__proto__ == Person.prototype);
+			console.log(Person.prototype.__proto__ == Object.prototype);
+			console.log(Object.prototype.__proto__ == null);*/
+			//lisi.aa();
+		</script>
+		
+	</body>
+</html>

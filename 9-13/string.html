@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			Object
+			String
+			Number
+			Boolean
+			Array
+			Date
+			RegExp    正则
+			
+			 */
+			
+//			let str = 'abcdabcd';
+			//let arr = [];
+			//let str1 = new String();
+			//console.log(str.constructor);
+			//console.log(str.__proto__);
+			//console.log(arr);
+			/*console.log(str.length);  //返回字符串的长度
+			console.log(str.charAt(0));   //用来返回指定位置的字符
+			console.log(str.charCodeAt(1)); // 用来返回某一个位置指定的字符的Unicode编码
+			console.log(String.fromCharCode(98));*/  //用来返回Unicode编码所对应的字符串
+			
+			
+			//位置
+			/*console.log(str.indexOf('abcd'));		//0
+			console.log(str.lastIndexOf('abcd'));*/   //4
+			
+			
+			
+			/*function includes(oStr,fStr){
+				let result = oStr.indexOf(fStr);
+				if (result != -1) {
+					return true;
+				}
+				return false;
+			}*/
+			
+			
+			
+			//includes 
+			/*let includes = str.includes('ab');
+			alert(includes);*/
+			
+			
+			//slice
+			/*let str1 = str.slice(0,3);   
+			console.log(str1);    //abc
+			let str2 = str.slice(2,4);
+			console.log(str2);*/		//cd
+			
+			/*let str1 = str.substr(2,2);   
+			console.log(str1);*/    //cd
+			
+			
+			
+			//replace  替换
+			///let str = 'abcdgggabcd';
+			/*let str1 = str.replace('abcd','****');
+			console.log(str1);
+			console.log(str);*/
+			
+			
+			/*function replaceAll(str,rStr){
+				//str = str.replace('abcd','****');
+				//循环    条件   存在rStr
+				//存在
+				//替换  relpace
+				//更新
+				//返回   return
+				let tStr = '';
+				for (let i=0;i<rStr.length;i++) {
+					tStr += '*';
+				}
+				let tStr = '*'.repeat(rStr.length);	
+			
+				while (str.includes(rStr)){
+					str = str.replace(rStr,tStr);
+				}
+				return str;
+			}
+			console.log(replaceAll(str,'cd'));*/
+			//console.log(str);
+			
+			
+			
+			
+			//match
+			/*let str = 'abcdgggabcd';
+			let result = str.match('dg');
+			console.log(result);*/
+			
+			//去空   trim
+			/*let str = '  abcdgggabcd  ';
+			let result = str.trim();
+			console.log(result);*/
+			
+			//拆分
+			/*let str = 'a-b-c-d';
+			let result = str.split('-',1);
+			console.log(result);*/
+			
+			
+			let str = 'https://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.com'
+			function find(str,rstr){
+				let arr = [];
+				let tstr = '*'.repeat(rstr.length);
+				while (str.includes(rstr)){
+					arr[arr.length] = str.indexOf(rstr);
+					//arr.push(str.indexOf(rstr));
+					str = str.replace(rstr,tstr);
+				}
+				return arr;
+			}
+			console.log(find(str,'baidu'));
+			
+			//方法2
+			let url = 'https://www.sina.com.cnhttps://www.sina.com.cnhttps://www.sina.com.cnhttps://www.sina.com.cnhttps://www.sina.com.cnhttps://www.sina.com.cn';
+			let newarr = [];
+			function find2(url,rurl){
+				for (let i=0;i<url.length;i++) {
+					if (url.slice(i,i+4) == rurl) {
+						newarr.push(i);
+					}
+				}
+				return newarr;
+			}
+			console.log(find2(url,'sina'));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//继承
+			function Person(){
+				this.name = 'zhangsan';
+				this.age = 12;
+				this.sex = 'nan';
+				this.say = function(){
+					alert('学习');
+				}
+			}
+			Person.prototype = {
+				sleep : function(){
+					alert('睡觉');
+				},
+				eat : function(){
+					alert('吃饭')
+				}
+			}
+			function Student(){
+				this.classes = '1401';
+				this.number = 201213;
+			}
+			Student.prototype = new Person();
+			let wangzhirui = new Student();
+			let chenjie = new Person();
+			console.log(wangzhirui);
+			
+			
+			
+			
+			
+			
+			
+			//string
+			
+			//查找
+			let str = '  abcdgggabcd';
+			console.log(str.charAt(1));
+			console.log(str.charCodeAt(0));
+			console.log(String.fromCharCode(98));
+			
+			//位置
+			console.log(str.indexOf('d'));
+			console.log(str.lastIndexOf('c'));
+			//存在
+			console.log(str.includes('bcd'));
+			//截取
+			console.log(str.slice(1,5));
+			console.log(str.slice(0,-1));
+			console.log(str.slice(2));
+			console.log(str.substring(1,5));
+			//替换
+			console.log(str.replace('abcd','1234'));
+			//重复
+			console.log(str.repeat(2));
+			//匹配，查找
+			console.log(str.match('bcdg'));
+			//去空
+			console.log(str.trim());
+			//转换
+			let str1 = 'a+b+c+d';
+			console.log(str1.split('+'));
+			
+		
+		
+		
+		//
+		let url = 'https://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.com';
+		function find(url,rurl){
+			let arr = [];
+			let star = '*'.repeat(rurl.length);
+			while (url.includes(rurl)){
+				arr.push(url.indexOf(rurl));
+				url = url.replace(rurl,star);
+			}
+			return arr;
+		}
+		console.log(find(url,'hao123'));
+		
+		
+		/*let str2 = 'https://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.com';
+		function find1(str2,rstr){
+			let arr = [];
+			let star = '*'.repeat(rstr.length);
+			while (str2.includes(rstr)){
+				arr.push(str2.indexOf(rstr));
+				str2 = str2.replace(rstr,star);
+			}
+			return arr;
+		}
+		console.log(find1(str2,'hao123'));*/
+		//方法2
+		let str2 = 'https://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.comhttps://www.hao123.com';
+		let newarr = [];
+		function find3(str2,rstr){
+			for (let i=0;i<str2.length;i++) {
+				if (str2.slice(i,i+6) == rstr) {
+					newarr.push(i);
+				}
+			}
+			return newarr;
+		}
+		console.log(find3(str2,'hao123'));
+		</script>
+	</body>
+</html>
