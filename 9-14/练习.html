@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//Array
+			/*let arr = [1,2,3,4,5];
+			let i=0;
+			while (i<arr.length){
+				console.log(arr);
+				i++;
+			}*/
+			
+			/*let arr = new Array(5);
+			arr[4] = 2;
+			console.log(arr);*/
+			
+			/*let arr = Array.of(1,2,3,4,5);
+			console.log(arr);*/
+			
+			
+			//let arr = Array.of(1,2,3,4,5,6);
+			/*arr.push('x','y','z');		//数组末尾添加元素
+			arr.unshift('g','g');		//数字首添加元素
+			arr.pop();arr.pop();arr.pop();//删除数组中最后一个元素
+			arr.shift();*/				//删除数组中一个元素
+			//arr.splice(1,0,'x','y','z');//数组中添加删除元素
+			
+			/*let arr = [1,2,3,4,5,6];
+			let arr1 = [7,8,9,10];*/
+			/*for (let i=0;i<arr1.length;i++) {
+				arr[arr.length] = arr1[i];
+			}
+			console.log(arr);*/
+			/*arr.push(...arr1);
+			console.log(arr);*/
+			
+			//join将数组变为字符串
+			/*let arr = [1,2,3,4,5,6];
+			let str = arr.join('+');
+			console.log(str);*/
+			
+			//将数组反转过来
+			/*let arr = [1,2,3,4,5];
+			let arr1 = arr.reverse();
+			console.log(arr1);*/
+			
+			//将数组按照ASCLL码进行排序
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			console.log(arr.sort());*/
+			
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			arr.sort(function(a,b){
+				return a - b < 0;
+			});
+			console.log(arr);*/
+			
+			
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let sum = 0;
+			let result = arr.forEach(function(value,index,obj){
+				sum = sum + value;
+			})
+			console.log(sum);*/
+			
+			//输出数组中的偶数
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let ou = [];
+			arr.forEach(function(value,index){
+				if(value%2 == 0){
+					ou.push(value);
+				}
+			})
+			console.log(ou);*/
+			
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let ou = arr.filter(function(value,index){
+				return value%2 == 0;
+			});
+			console.log(ou);*/
+			
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let qq = arr.map(function(value,index){
+				return value * 2;
+			})
+			console.log(qq);*/
+			
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let qq = arr.map((value,index) =>value*2);
+			console.log(qq);
+			*/
+			
+			
+			//去重
+			/*let arr = [1,1,2,2,3,4,5,6,6,7,7,8,9];
+			let newarr = [];
+			arr.forEach(function(value,index){
+				if (!newarr.includes(arr[value])) {
+					newarr.push(arr[value]);
+				}
+			})
+			console.log(newarr);*/
+			
+			
+			/*let arr = [1,1,2,2,3,4,5,6,6,7,7,8,9];
+			let newarr = [];
+			arr.forEach(function(value,index){
+				if (index == arr.lastIndexOf(arr[index])) {
+					newarr.push(arr[index]);
+				}
+			})
+			console.log(newarr);*/
+			
+			
+			/*let arr = [1,1,2,2,3,4,5,6,6,7,7,8,9];
+			let newarr = [];
+			arr.forEach(function(value,index){
+				let flag = true;
+				for (let j=index+1;j<arr.length;j++) {
+					if (arr[index] == arr[j]) {
+						flag = false
+						break;
+					}
+					
+				}
+				if (flag) {
+						newarr.push(arr[index]);
+					}
+				return newarr;
+			})
+			console.log(newarr);*/
+			
+			
+			/*let arr = [1,1,2,2,3,4,5,6,6,7,7,8,9];
+			let newarr = [];
+			arr.forEach(function(value,index){
+				let arr1 = [];
+				for (let j=index+1;j<arr.length;j++) {
+					arr1.push(arr[j]);
+				}
+				if (!arr1.includes(arr[index])) {
+					newarr.push(arr[index]);
+				}
+				return newarr;
+			})
+			console.log(newarr);*/
+			
+			/*let arr = [1,1,2,2,3,4,5,6,6,7,7,8,9];
+			Array.prototype = arr.forEach(function(value,index){
+				let newarr = [];
+				let arr1 = [];
+				for (let j=index+1;j<arr.length;j++) {
+					arr1.push(arr[j]);
+				}
+				if (!arr1.includes(arr[index])) {
+					newarr.push(arr[index]);
+				}
+				return newarr;
+			})
+			console.log(newarr);*/
+			
+			
+			
+			
+			//Math
+			/*let arr = ['a','b','c','d','e'];
+			function find(arr,num){
+				let newarr = [];
+				while (newarr.length<num){
+					let qq = Math.floor(Math.random()*arr.length);
+					if (!newarr.includes(arr[qq])) {
+						newarr.push(arr[qq]);
+					}
+				}
+				return newarr;
+			}
+			console.log(find(arr,3));*/
+			
+			
+			
+			let arr = ['a','b','c','d','e'];
+			function find(arr,num){
+				let newarr = [];
+				for (let i=0;i<num;i++) {
+					let qq = Math.floor(Math.random()*arr.length);
+					while (newarr.includes(arr[qq])){
+						qq = Math.floor(Math.random()*arr.length);
+					}
+					newarr.push(arr[qq]);
+				}
+				return newarr;
+			}
+			console.log(find(arr,5))
+		</script>
+	</body>
+</html>

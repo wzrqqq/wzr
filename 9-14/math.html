@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>math</title>
+		<style>
+			#box{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script>
+			//console.log(Math);
+			//console.log(Math.abs(-10));      //绝对值    
+			
+			//console.log(Math.max(20,1,45,7,43));    //最大值
+			
+			//console.log(Math.round(10.45));   //近似值      10
+			//console.log(Math.round(-0.45));	//0
+			//console.log(Math.round(-10.5));	//-10
+			
+			//console.log(Math.ceil(10.5));		//向上取整   11
+			//console.log(Math.ceil(10.4));		//向上取整   11
+			//console.log(Math.ceil(5.5));		//向上取整   6
+			//console.log(Math.ceil(-5.3));		//向上取整   5
+			
+			//console.log(Math.floor(10.5));		//向下取整   10
+			//console.log(Math.floor(5.5));		//向下取整   5
+			//console.log(Math.floor(0.5));		//向下取整   0
+			//console.log(Math.floor(-0.5));		//向下取整   -1
+			
+			//console.log(Math.random());		//随机数    默认取值范围(0~1)
+			//console.log(Math.random()*10);	//0 ~ 10
+			//console.log(Math.random()*-10);	//0 ~ -10
+			//console.log(Math.random()*10+10);	//10 ~ 20
+			//console.log(Math.random()*15+5);	//5 ~ 20
+			//console.log(Math.random()*10-5);	//-5 ~ 5
+			//console.log(Math.random()*17+3);	//3 ~ 20
+			
+			//console.log(Math.pow(2,3));			//平方    2的3次方
+			//console.log(Math.sqrt(2));			//平方根    根号2
+			
+						
+			/*let arr = ['a','b','c','d','e'];
+			function qu(arr,num){
+				let newarr = [];
+				while (newarr.length<num) {
+					let qq = Math.floor(Math.random()*arr.length);
+					if (!newarr.includes(arr[qq])) {
+						newarr.push(arr[qq]);
+					}
+				}
+				return newarr;
+			}
+			console.log(qu(arr,3));*/
+			//Math.floor(Math.random()*arr.length);
+			
+			
+			
+			/*let arr1 = ['a','b','c','d','e'];
+			function find(arr,num){
+				let newarr = [];
+				for (let i=0;i<num;i++) {
+					let qq = Math.floor(Math.random()*arr.length);
+					while (newarr.includes(arr[qq])){
+						qq = Math.floor(Math.random()*arr.length);
+					}
+					newarr.push(arr[qq]);
+				}
+				return newarr;
+			}
+			console.log(find(arr1,5));*/
+			
+			
+			
+			
+			
+			
+			//  0 ~ 255
+			//  Math.random()*255
+			//	Math.roud()   0 ~ 255
+			//	Math.floor()	0 ~ 254
+			//	Math.ceil()		1 ~ 255
+			
+			/*function color(){
+				let str = 'rgb(';
+				for (let i=0;i<3;i++) {
+					
+					let num = Math.round(Math.random()*255);
+					str += num+',';
+				}
+				str = str.slice(0,-1);
+				str +=")";
+				return str;
+			}
+			console.log(color());
+			let box =document.getElementById('box');
+			box.onmouseover = function(){
+				box.style.background = color();
+			}*/
+		</script>
+	</body>
+</html>

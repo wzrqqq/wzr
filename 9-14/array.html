@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//有一些方法是构造函数的
+			/*function Person(){
+				this.name = 'zhangsan';
+				this.age = 12;
+			}
+			Person.hello = 'hello world';
+			Person.prototype = {
+				study : function(){
+					alert('学习');
+				}
+			}
+			Person.prototype.say = function(){
+				alert('this.name');
+			}
+			let zhangsan = new Person();
+			console.dir(zhangsan);
+			console.log(Person.hello);*/
+			
+			
+			
+			
+			
+			//数组
+			//let arr = [1,2,3,4];
+			/*let i =0;
+			while (i<arr.length){
+				console.log(arr[i])
+				i++;
+			}*/
+			
+			/*for(let i in arr){
+				console.log(arr[i]);
+			}*/
+			
+			
+			
+			
+			
+			
+			//let arr = ['a','b','c','d','e'];
+			//let arr = new Array();
+			//let arr = Array.of(5,4,3,2);
+			/*arr.length = 0;
+			console.log(arr.length);
+			console.log(arr);*/
+			//arr.length = 7;
+			/*arr.push(1,2,3,4,5);        //末尾添加元素
+			arr.unshift('x','y','z');	//首添加元素
+			arr.pop();					//删除最后一个元素
+			arr.shift();*/				//删除第一个元素
+			//arr.splice(1,2);			//删除
+			//arr.splice(1,0,'x','y');    //添加
+			//console.log(arr);
+			
+			
+			//合并数组
+			//let arr = [1,2,3,4,5,6];
+			//let arr1 = ['a','b','c','d','e'];
+			/*for (let i=0;i<arr1.length;i++) {
+				arr.push(arr1[i])
+			}
+			console.log(arr);*/
+			
+			/*arr.push(...arr1);
+			console.log(arr);*/
+			//console.log(...arr1);    //将一个数组拆成一个一个的
+			
+			//let newarr = arr.concat(arr1);
+			//console.log(newarr);
+			
+			
+			//转换
+			/*let arr = [1,2,3,4,5,6];
+			let str = arr.join('-');
+			console.log(str);*/
+			
+			//反转
+			/*let arr = [1,2,3,4,5,6];
+			console.log(arr.reverse());*/
+			
+			
+			
+			//排序
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			//console.log(arr.sort());
+			//console.log(arr);
+			arr.sort(function(a,b){
+				return a - b < 0;
+	
+			})
+			console.log(arr);*/
+			
+			
+			//forEach    求和
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let sum = 0;
+			let result = arr.forEach(function(value,index,obj){
+				sum += value;
+			})
+			console.log(result);*/
+			
+			
+			//筛选偶数
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let ou = [];
+			arr.forEach(function(value,index){
+				if (value%2 == 0) {
+					ou.push(value);
+				}
+			})
+			console.log(ou);*/
+			
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let ou = [];
+			let newarr = arr.filter(function(value,index,obj){
+				return value%2 == 0;
+			})
+			console.log(newarr);*/
+			
+			
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let ou = [];
+			let map = arr.map(function(value,index,obj){
+				return value + index;
+			})
+			console.log(map);*/
+			
+			
+			
+			//箭头函数
+			/*function(value,index,obj){
+				return value + index;
+			}*/
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let ou = [];
+			let map = arr.map((value,index) => value + index*2);
+			console.log(map);*/
+			
+			
+			/*let arr = [12,3,4,56,77,88,12,102,43,73];
+			let sum = 0;
+			arr.forEach( (value) => sum += value);
+			console.log(sum);*/
+			
+			//箭头函数返回json对象
+			/*let fn = (num) => ({name:'zhangsan',age:12});
+			console.log(fn());
+			
+			let aa = (num1) => {
+				return{name:'zhnagsan'}
+			}
+			console.log(aa(11));*/
+			
+			
+			//去重
+					//方法一
+			/*let arr = [1,1,2,2,3,4,5,6,6,7,7,8,9];
+			let newarr = [];
+			function quchong(){
+				for (let i=0;i<arr.length;i++) {
+					if (!newarr.includes(arr[i])) {
+						newarr.push(arr[i]);
+					} 
+				}
+				return newarr;
+			}	
+				console.log(quchong());*/
+			
+					//方法二
+			/*let arr = [1,1,2,2,3,4,5,6,6,7,7,8,9];
+			let newarr = [];
+			function quchong(){
+				for (let i=0;i<arr.length;i++) {
+						if ( i == arr.lastIndexOf(arr[i])) {
+							newarr.push(arr[i]);
+						}
+				}
+				return newarr;
+			}
+			console.log(quchong());*/
+			
+			
+			
+			/*let arr = [1,1,2,2,3,4,5,6,6,7,7,8,9];
+			function quchong(arr){
+			let newarr = [];
+				for (let i=0;i<arr.length;i++) {
+					let flag = true;
+					for (let j=i+1;j<arr.length;j++) {
+						if (arr[i] ==  arr[j]) {
+							flag = false;
+							break;
+						}
+					}
+					if (flag) {
+					newarr.push(arr[i]);
+					}
+				}
+				return newarr;
+			}
+			console.log(quchong(arr));*/
+			
+			
+			
+			/*let arr = [1,2,3,4,5,1,2,3];
+			function delRepeat(arr){
+				let newarr = [];
+					
+					//数组去空
+					 //  不重复放新数组
+					 //     判断新数组 -> arr[i]
+					 //          放
+					 //     返回newarr
+				
+				for (let i=0;i<arr.length;i++) {
+					if (!newarr.includes(arr[i])) {
+						newarr.push(arr[i]);
+					}
+				}
+				return newarr;
+			}
+			console.log(delRepeat(arr));*/
+			
+			
+			
+			//方法四
+			/*let arr = [1,2,3,4,5,1,2,3];
+			function find(arr){
+				let newarr = [];
+				for (let i=0;i<arr.length;i++) {
+					let arr1 = [];
+					for (let j=i+1;j<arr.length;j++) {
+						arr1[arr1.length] = arr[j];
+					}
+					if (!arr1.includes(arr[i])) {
+						newarr[newarr.length] = arr[i];
+					}
+				}
+				return newarr;
+			}
+			console.log(find(arr));*/
+			
+			
+			
+			
+			
+			//将函数变为数组对象
+			/*let arr1 = [1,1,2,2,3,4,5,6,6,7,7,8,9];
+			Array.prototype.quchong = function(){
+				let newarr = [];
+				for (let i=0;i<this.length;i++) {
+					if (!newarr.includes(this[i])) {
+						newarr.push(this[i]);
+					} 
+				}
+				return newarr;
+			}	
+				console.log(arr1.quchong());*/
+		</script>
+	</body>
+</html>
