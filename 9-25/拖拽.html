@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>拖拽</title>
+		<style>
+			
+			*{
+				margin: 0;
+				padding: 0;
+					
+			}
+			.box{
+				width: 300px;
+				height: 300px;
+				background: red;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}	
+			.son{
+				width: 300px;
+				height: 300px;
+				background: green;
+				position: absolute;
+				top: 200px;
+				left: 200px;
+			}	
+			
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="son"></div>
+		
+		
+		
+		
+		<script>
+			window.addEventListener('load',function(){
+				//drag  move
+				let box = document.querySelector('.box');
+				box.addEventListener('mousedown',function(e){
+					let ox = e.offsetX , oy = e.offsetY;
+					document.addEventListener('mousemove',fn)					
+					box.addEventListener('mouseup',function(){
+						document.removeEventListener('mousemove',fn)
+					})
+					function fn(e){
+						let lefts = e.clientX - ox , tops = e.clientY - oy;
+						box.style.left = `${lefts}px`;
+						box.style.top = `${tops}px`;
+					}
+				})				
+			})
+			
+			
+		</script>
+	</body>
+</html>

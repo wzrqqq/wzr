@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>创建元素</title>
+		<style>
+			.box{
+				width: 300px;
+				height: 300px;
+				border: 1px solid black;
+			}
+			.p{
+				width: 200px;
+				height: 200px;
+				background: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		
+		
+		
+		
+		
+		
+		
+		
+		<script>
+			window.onload = function(){
+				let box = document.querySelector('.box');
+				//创建元素
+				let divs = document.createElement('div');		//接受标签名
+				divs.style.width = '200px';
+				divs.style.height = '200px';
+				divs.style.background = 'red';
+				
+				let p = document.createElement('p');
+				//p.className = 'p';
+				p.style.cssText = `
+					width:200px;
+					height:200px;
+					background:blue;
+				`;
+				//插入方法
+				box.appendChild(divs);
+				box.appendChild(p);
+			}	
+				
+				
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		
+		<script>
+			/*
+			 * 
+			 	将element插入到position后面
+			 	element是要插入的元素	obj
+			 	position插入的位置		obj
+			*/
+			/*function insterAfter(element,position){
+				let next = position.nextElementSibling;
+				let parent = position.parentNode;
+				if (next) {
+					parent.insertBefore(element,next);
+					
+				}else{
+					parent.appendChild(element);
+				}
+				
+			}*/
+			
+			
+			HTMLElement.prototype.insertAfter = function(element){
+				let next = this.nextElementSibling;
+				let parent = this.parentNode;
+				if (next) {
+					parent.insertBefore(element,next);
+					
+				}else{
+					parent.appendChild(element);
+				}
+			}
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

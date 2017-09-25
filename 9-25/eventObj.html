@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+			width: 300px;
+			height: 300px;
+			background: red;
+			margin-top: 300px;
+			padding: 10px;
+			border: 5px solid black;
+		}
+		body{height: 2000px;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+		</div>
+		
+		
+		
+		<script>
+			window.addEventListener('load',function(){
+				let box = document.querySelector('.box');
+				
+				box.addEventListener('mousemove',function(e){
+					//console.log(1)
+					//console.log(e);
+					this.innerHTML = `
+					相对于页面pageX = "${e.pageX}";<br/>
+					相对于页面pageY = "${e.pageY}";<br/>
+					相对于浏览器clientX = "${e.clientX}";<br/>
+					相对于浏览器clientY = "${e.clientY}";<br/>
+					相对于事件源offsetX = "${e.offsetX}";<br/>
+					相对于事件源offsetY = "${e.offsetY}";<br/>
+					相对于屏幕screenX = "${e.screenX}";<br/>
+					相对于屏幕screenY = "${e.screenY}";<br/>					
+					`;										
+				})				
+			})
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 300px;
+				height: 300px;
+				border: 2px solid black;
+				overflow: scroll;	/*加滚动条*/
+			}
+			.son{
+				width: 200px;
+				height: 800px;
+				background: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box" id="box" active='true'>
+			<div class="son"></div>
+		</div>
+		
+
+		
+		
+		<script>
+			let box = document.querySelector('.box');
+			/*box.setAttribute('aa','bb');
+			console.log(box.getAttribute('active'));*/
+			
+			box.onscroll = function(){
+				console.log(box.scrollTop);
+				//console.log(scrollLeft);
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>position</title>
+	</head>
+	<style>
+		.box{
+			width: 300px;
+			height: 300px;
+			background: red;
+		}
+	</style>
+	<body>
+		<div class="box"></div>
+		
+		
+		
+		<script>
+			let box = document.querySelector('.box');
+			/*box.onmouseover = function(){
+				this.style.background = 'green';
+			}
+			box.onmouseover = function(){
+				this.style.borderRadius = '50%';
+			}*/
+			
+			box.addEventListener('click',function(){
+				this.style.background = 'green';
+			},false);
+			
+			box.addEventListener('click',function(){
+				this.style.borderRadius = '50%';
+			})
+			box.addEventListener('click',fn,false);
+			function fn () {
+				this.style.transform = `scale(2,2)`;
+			};
+			
+			box.removeEventListener('click',fn,false);
+			box.removeEventListener('click',)
+		</script>
+	</body>
+</html>

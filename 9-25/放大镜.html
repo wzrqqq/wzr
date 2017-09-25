@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.small,.big{
+				width: 300px;
+				height: 300px;	
+				border: 1px solid black;
+				float: left;
+				overflow: hidden;
+				position: relative;
+			}
+			.small > img{
+				width: 100%;
+				height: 100%;
+			}
+			.big > img{
+				width: 500px;
+				height: 500px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.zhe{
+				width: 150px;
+				height: 150px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: rgba(0,0,0,0.3);
+				opacity: 0.5;
+			}
+			.opacity{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 22;
+			}
+		</style>
+		<!--<script src="js/function.js"></script>-->
+	</head>
+	<body>
+		<div class="small">
+			<img src="img/star1.png" alt="" />
+			<div class="zhe"></div>
+			<div class="opacity"></div>
+		</div>
+		<div class="big">
+			<img src="img/star1.png"/>
+		</div>
+		
+		
+		<script>
+			/*window.onload = function(){
+				let small = document.querySelector('.small');
+				let big = document.querySelector('.big');
+				let bImg = document.querySelector('.big img');
+				let bili = bImg.offsetWidth / small.offsetWidth;
+				
+				small.onmousemove = function(e){
+					let ox = e.offsetX , oy = e.offsetY;
+					bImg.style.left = `${-ox*bili}px`;
+					bImg.style.top = `${-oy*bili}px`;
+				}
+			}*/	
+			
+			
+			window.onload = function(){
+				let small = document.querySelector('.small');
+				let big = document.querySelector('.big');
+				let sImg = document.querySelector('.small img')
+				let bImg = document.querySelector('.big img');
+				let zhe = document.querySelector('.zhe');
+				let bili = bImg.offsetWidth / sImg.offsetWidth;
+				let opacity = document.querySelector('.opacity');
+				let zheW = zhe.offsetWidth;
+				let zheH = zhe.offsetHeight;
+				let sw = small.offsetWidth;
+				let sh = small.offsetHeight;
+				let bw = bImg.offsetWidth;
+				let bh = bImg.offsetHeight;
+				
+				console.log(bImg.offsetWidth)
+				console.log(sImg.offsetWidth)
+				
+				
+				
+				opacity.onmousemove = function(e){
+					let x = e.offsetX - zheW*0.5;
+					let y = e.offsetY - zheH*0.5;
+					if (x >= sw - zheW) {
+						x = sw - zheW
+					}
+					if (x <= 0 ) {
+						x = 0;
+					}
+					if (y >= sh - zheH) {
+						y = sh - zheH
+					}
+					if (y <= 0 ) {
+						y = 0;
+					}
+					zhe.style.left = x +'px';
+					zhe.style.top = y +'px';
+					
+					
+					bImg.style.width = sw * bw / zheW + 'px';
+					bImg.style.height = sh * bh / zheH + 'px';
+					
+					bImg.style.left = -sw * x / zheW + 'px';
+					bImg.style.top = -sh * y / zheH + 'px';
+				}
+				
+				/*small.onmousemove = function(e){
+					let x = e.offsetX - zheW*0.5;
+					let y = e.offsetY - zheH*0.5;
+					zhe.style.left = x +'px';
+					zhe.style.top = y +'px';
+					bImg.style.left = `${-x*bili}px`;
+					bImg.style.top = `${-y*bili}px`;
+				}*/
+				
+				
+				
+				
+				
+			}
+			
+		</script>
+		
+	</body>
+</html>

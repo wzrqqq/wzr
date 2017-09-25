@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding:0;
+				
+			}
+			.box{
+				width:300px;
+				height:300px;
+				background:red;
+				position:absolute;
+				border-radius: 50%;
+			}
+			.son{
+				width:100px;
+				height:100px;
+				background:green;
+				position:absolute;
+				right:0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="son">
+			<div class="son2">
+				<p class="pp"></p>
+				
+			</div>
+		</div>
+		<p></p>
+		<pre></pre>
+		<div class="a"></div>
+		<h1></h1>
+		<span></span>
+		
+		
+		<script>
+			//移动方块
+			/*window.onload = function(){
+				let box = document.getElementsByClassName('box')[0];
+				let son = document.getElementsByClassName('son')[0];
+				box.onmouseover = function(){
+					A.stop();
+				}
+				box.onmouseout = function(){
+					A.move();
+				}
+				window.onresize = function(){
+					A.resize();
+					B.resize();
+				}
+				window.setTimeout(function(){
+					A.stop();
+				},1000);
+				
+			
+				function Float(obj){
+					this.obj = obj;
+					this.name = 'zhangsan';
+					this.maxX = window.innerWidth - this.obj.offsetWidth;
+					this.maxY = window.innerHeight - this.obj.offsetHeight;
+					this.speedX = 20;
+					this.speedY = 20;
+				}
+				Float.prototype.resize = function(){
+					this.maxX = window.innerWidth - this.obj.offsetWidth;
+					this.maxY = window.innerHeight - this.obj.offsetHeight;
+				}
+				Float.prototype.stop = function(){
+					clearInterval(this.t);
+				}
+				Float.prototype.move = function(){
+					let that = this;
+					this.t = setInterval(function(){
+						let lefts = that.obj.offsetLeft + that.speedX;
+						if (lefts >= that.maxX) {
+							lefts = that.maxX;
+							that.speedX *= -1;
+						}
+						if(lefts <= 0){
+							lefts = 0;
+							that.speedX *= -1;
+						}
+						that.obj.style.left = lefts + 'px';
+						
+						//上下
+						let tops = that.obj.offsetTop + that.speedY;
+						if (tops >= that.maxY) {
+							tops = that.maxY;
+							that.speedY *=-1;
+						}
+						if (tops <= 0) {
+							tops = 0;
+							that.speedY *= -1;	
+						}
+						that.obj.style.top = tops + 'px';
+						
+						
+					},60);
+				
+				
+				}
+		
+				let A = new Float(box);	
+				let B = new Float(son);
+				A.move();
+				B.move();
+			/////////
+			}*/
+			
+			
+			
+			//next练习
+			/*let box = document.querySelector('.box');
+			function next(x,y){
+				let parent = x.parentNode;
+				let child = parent.children;
+				let index = 0;
+				for (let i=0;i<child.length;i++) {
+					if (child[i] == y) {
+						index = i
+						break;
+					}
+				}
+				let nextAll = Array.from(child).slice(index+1);
+				for (let i=0;i<nextAll.length;i++) {
+					if (nextAll[i].nodeName == y.toUpperCase()) {
+						return nextAll[i];
+					}
+				}
+				return null;
+			}
+			let result = next(box,'h1');
+			console.log(result);*/
+			
+			
+			
+			//while
+			/*let box = document.querySelector('.box');
+			function next1(x,y){
+				let nextone = x.nextElementSibling;
+				while(true){
+					//console.log(nextone);
+					if(nextone == null) {
+						return null;
+					}
+					if(y.toUpperCase() == nextone.nodeName) {
+						return nextone;
+					}
+					nextone = nextone.nextElementSibling;
+				}
+				
+			}
+			
+			
+			let result = next1(box,'span');
+			console.log(result);*/
+			
+			
+			////////////////////////////////////////
+			//寻找当前元素上面指定的父元素
+			/*let pp = document.querySelector('.pp');
+			function parents(x,y){
+				let parent = x.parentNode;
+				while (true){
+					if (parent == null) {
+						return null;
+					}
+					if (y == parent.className) {
+						return parent;
+					}
+					parent = parent.parentNode;
+				}
+			}
+			let re = parents(pp,'son');
+			console.log(re);*/
+			
+			
+			
+			/*let box = document.querySelector('.box');
+			function next(x,y){
+				let parent = x.parentNode;
+				let child = parent.children;
+				for (let i=0;i<child.length;i++) {
+					if (child[i] == x) {
+						index = i;
+						break;
+					}
+				}
+				let nextAll = Array.from(child).slice(index + 1);
+				for (let i=0;i<nextAll.length;i++) {
+					if (nextAll[i].nodeName == y.toUpperCase()) {
+						return nextAll[i];
+					}
+				}
+				return null;
+			}
+			let result = next(box,'h1');
+			console.log(result);*/
+			
+			let box = document.querySelector('.box');
+			function next(x,y){
+				let nextone = null;
+				while (nextone = x.nextElementSibling){
+					if (nextone.nodeName == y.toUpperCase()) {
+						break;
+					}
+					x = nextone;
+				}
+				return nextone;
+			}
+			let result = next(box,'h1');
+			console.log(result);
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

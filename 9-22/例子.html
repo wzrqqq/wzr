@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.circle{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: orange;
+				position: absolute;
+				transition: all ease 1000ms;
+				left: 50%;
+				top: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		
+		
+		
+		
+		<script>
+			//在页面中随机插入20个div，大小，颜色，位置随机
+		
+		window.onload = function(){
+				yuan(1000);
+				function yuan(x){
+					function color(){
+						let arr = [];
+						for (let i=0;i<3;i++) {
+							arr.push(Math.round(Math.random()*255));
+						}
+						return arr;
+					}
+					//console.log(color());
+					for (let i=0;i<x;i++) {
+					let divs = document.createElement('div');
+					divs.className = 'circle';
+					//位置随机
+					let lefts = Math.floor((window.innerWidth - 150)*Math.random());
+					let tops = Math.floor((window.innerHeight - 150)*Math.random());
+					let heights = Math.floor(Math.random()*70+30);
+					let widths = Math.floor(Math.random()*70+30);
+					
+					//divs.style.left = `${lefts}px`;
+					//divs.style.top = `${tops}px`;
+					divs.style.width = `${heights}px`;
+					divs.style.height = `${heights}px`;
+					divs.style.background = `rgb(${color().join()})`;
+					//console.log(`rgb(${color().join()})`);						
+					document.body.appendChild(divs);				
+					
+					setTimeout(function(){
+						divs.style.transitionDelay = `${Math.random()*9}s`;
+						divs.style.left = `${lefts}px`;
+						divs.style.top = `${tops}px`;
+					},500);
+				}
+			}
+		}
+		
+		
+		
+			
+			
+			
+		</script>
+	</body>
+</html>

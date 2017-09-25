@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box">
+			hello
+			<div class="son">
+				lalala
+				<p class="pp">sasa</p>
+			</div>
+			<span>飒飒</span>
+			<h2></h2>
+			<!---->
+		</div>
+		<p></p>
+		<pre></pre>
+		<div class="a"></div>
+		<h1></h1>
+		
+		
+		<script>
+			/*let arr = [1,2,3,4,5,6];
+			let arr1 = ['a','b','c','d','e'];
+			let newarr = Array.prototype.push.call(arr,...arr1);
+			console.log(arr);*/
+			
+			//childNodes模仿children
+			/*let box = document.querySelector('.box');
+			let child = box.childNodes;
+			console.log(child);
+			let newarr = [];
+			for (let i=0;i<child.length;i++) {
+				if (child[i].nodeType == 1) {
+					newarr.push(child[i]);
+				}
+			}
+			console.log(newarr);*/
+			
+			//filter
+			/*let box = document.querySelector('.box');
+			let child = box.childNodes;
+			let result = Array.prototype.filter.call(child,function(a){
+				return a.nodeType == 1;
+			})
+			console.log(result);*/
+			
+			
+			/*let box = document.querySelector('.box');
+			let child = box.childNodes;
+			let arr = Array.from(child);
+			let newarr = arr.filter(element=>element.nodeType == 1);
+			console.log(newarr);*/
+			
+			
+			
+			
+			
+			//forEach
+			/*let box = document.querySelector('.box');
+			function childern(parent){
+				let newarr = [];
+				let child = parent.childNodes;
+				child.forEach(element => {
+					if (element.nodeType == 1) {
+						newarr.push(element);
+					}
+				})
+				return newarr;
+			}
+			
+			console.log(childern(box));*/
+			///////////////////////////////////////////////////////////////////////////
+			
+			//firstChild模拟firstElementChild
+			
+			/*let box = document.querySelector('.box');
+			function firstChild(parent){
+				 return firstChild(parent)[0];
+			}
+			
+			
+			function lastChild(parent){
+				let child = children(parent);
+				 //return lastChild(parent)[child.length-1];
+				 return child.pop();
+			}*/
+			/////////////////////////////////////////////////////////////////////////////
+			//next
+			/*let box = document.querySelector('.box');
+			function next(element,tagname){
+				let parent = element.parentNode;
+				
+				let child = parent.children;
+				let index = 0;
+				for (let i=0;i<child.length;i++) {
+					if (child[i] == element) {
+						index = i;
+						break;
+					}
+				}
+				let nextAll = Array.from(child).slice(index+1);
+				for(let i=0;i<nextAll.length;i++){
+					if(nextAll[i].nodeName == tagname.toUpperCase()){
+						return nextAll[i];
+					};
+					
+				}
+				return null;
+				
+			}
+			
+			let result = next(box,'h1');
+			console.log(result);*/
+			
+			
+			
+			//while
+			/*let box = document.querySelector('.box');
+			function next1(x,y){
+				let nexts = x.nextElementSibling;
+				while (true){
+					if (nexts == null) {
+						return null;
+					}
+					if (nexts.nodeName == y.toUpperCase()) {
+						return nexts;
+					}
+					nexts = nexts.nextElementSibling;
+				}
+			}
+			let result = next1(box,'h1');
+			console.log(result);*/
+			
+			
+			
+			//do while
+			
+			/*let box = document.querySelector('.box');
+			function next2(x,y){
+				let nextone = x.nextElementSibling;
+				do{
+					if (nextone == null) {
+						return null;
+					}
+					if (nextone.nodeName == y.toUpperCase()) {
+						return nextone;
+					}
+					nextone = nextone.nextElementSibling;
+				}while(true)
+			}
+			
+			let result = next2(box,'h1');
+			console.log(result);*/
+			
+			
+			////////////////////////////////////
+			//寻找当前元素上面指定元素的父元素
+			/*let pp = document.querySelector('.pp');
+			function parents(x,y){
+				let parent = x.parentNode;
+				while (true){
+					if (parent == null) {
+						return null
+					}
+					if (y == parent.className) {
+						return parent;
+					}
+					parent = parent.parentNode;
+				}
+			}
+			let result = parents(pp,'box');
+			console.log(result);*/
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

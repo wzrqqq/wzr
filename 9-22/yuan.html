@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.pointer{
+				width: 1px;
+				height: 1px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+			.box{
+				width: 20px;
+				height: 20px;
+				background: gold;
+				position: absolute;
+				border-radius: 50%;
+				left: 0;
+				top: 0;
+				transition: all ease 4s;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="pointer">
+			
+		</div>
+		
+		
+		
+		<script>
+			/*
+			 	lefts = r * Math.cons(deg);
+			 	tops = r * Math.sin(deg);
+			 	deg = 360/num
+			 	i	i*deg
+			 	
+			*/
+			function color(){
+					let str = 'rgba(';
+					for(let i=0;i<3;i++){
+						str = str + Math.round(Math.random()*255) + ',';
+					}
+					
+					str = str.slice(0,-1);
+					return str+ ','+ '0.2'+')'
+				}
+			console.log(color());
+			
+			
+			yuan(180);
+			function yuan(num){
+				let pointer = document.querySelector('.pointer');
+				let t = 1;
+				
+				
+				for (let i=-1000;i<num;i++) {
+					let divs = document.createElement('div');
+					divs.className = 'box';
+					let r = 250;
+					let deg = 360/num;
+					let hu = (Math.PI*deg)/180*i;
+					let lefts = r*Math.cos(hu);
+					let tops = r*Math.sin(hu);
+					
+					
+					//console.log(`${t+=0.5}s`);
+					divs.style.background = color();
+					pointer.appendChild(divs);
+					
+					setTimeout(function(){
+						divs.style.transitionDelay = `${i*5}ms`;
+						divs.style.left = `${lefts}px`;
+						divs.style.top = `${tops}px`;
+					},10)
+					
+					
+				}
+			}
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

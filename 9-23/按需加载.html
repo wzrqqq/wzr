@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>按需加载</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				height: 3000px;
+			}
+			header{
+				width: 1226px;
+				height: 190px;
+				margin: 0 auto;
+				text-align: center;
+				font-size: 30px;
+				background: orange;
+				line-height: 190px;
+			}
+			.floor{
+				width: 1226px;
+				height: 640px;
+				margin: 80px auto;
+			}
+			.floor img{
+				display: block;
+				width: 245px;
+				height:250px;
+				float: left;
+			}
+			.aside{
+				position: fixed;
+				left: 20px;
+				top: 50%;
+				margin-top: -75px;
+				width: 30px;
+				height: 150px;
+				list-style: none;
+			}
+			.aside li{
+				width: 100%;
+				height: 29px;
+				border: 1px solid blue;
+				text-align: center;
+				line-height: 29px;
+				margin-top: -1px;
+			}
+			.search{
+				width: 100%;
+				height: 50px;
+				background: blue;
+				position: fixed;
+				top: -50px;
+			}
+		</style>
+	</head>
+	<body>
+		<header><h1>这是头部</h1></header>
+		<ul class="floor">
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+		</ul>
+		<ul class="floor">
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+		</ul>
+		<ul class="floor">
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+		</ul>
+		<ul class="floor">
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+		</ul>
+		<ul class="floor">
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+		</ul>
+		<ul class="floor">
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+		</ul>
+		<ul class="floor">
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+		</ul>
+		<ul class="floor">
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+			<img imgPath="img/star1.png"/>
+			<img imgPath="img/star2.png"/>
+			<img imgPath="img/star3.png"/>
+			<img imgPath="img/star4.png"/>
+			<img imgPath="img/star5.png"/>
+		</ul>
+		<ul class="aside">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+		<div class="search">
+			
+		</div>
+		
+		
+		
+		
+		
+		<script>
+			/*
+			 	innerHight = scrollTop >= offsetTop
+			*/
+			window.onload = function () {	
+				let aside = document.querySelectorAll('.aside > li');
+				let ch = innerHeight;
+				let floor = document.querySelectorAll('.floor');
+				console.log(floor);
+				let floorarr = [];
+				let color = ['red','green','yellow','pink','orange','blue','purple','skyblue'];
+				let flag = true;
+				floor.forEach(element => {
+					floorarr.push(element.offsetTop);
+				})
+				window.onscroll = function(){
+					if (!flag) {
+						return;
+					}
+					//console.log(document.documentElement.scrollTop);
+					let scrolltop = document.documentElement.scrollTop;
+					floorarr.forEach((value,index) =>{
+						if (scrolltop + ch >= value + 300) {
+							//
+							for (let i=0;i<aside.length;i++) {
+								aside[i].style.background = 'none';
+							}
+							aside[index].style.background = color[index];
+							//
+							let imgs = floor[index].getElementsByTagName('img');
+							for (let i=0;i<imgs.length;i++) {
+								imgs[i].src = imgs[i].getAttribute('imgPath');
+							}							
+						}						
+					})					
+				}	
+				
+				///////////////
+				/*aside.forEach((element,index) =>{
+					element.onclick = function(){
+						flag = false;
+						//document.documentElement.scrollTop = floorarr[index];
+						for (let i=0;i<aside.length;i++) {
+							aside[i].style.background = 'none';
+						}
+						element.style.background = color[index];
+						animate(document.documentElement,{scrollTop:floorarr[index]},function(){
+							flag =true;
+						});
+					}
+				})*/
+				
+				
+				
+				aside.forEach((element,index) => {
+					element.onclick = function(){
+						flag = false;
+						for (let i=0;i<aside.length;i++) {
+							aside[i].style.background = 'none';
+						}
+						element.style.background = color[index];
+						animate(document.documentElement,{scrollTop:floorarr[index]},function(){
+							flag = true;
+						});
+					}
+				});
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				//////////////////////////////////
+			}
+			
+			
+			
+		</script>
+		<script src="js/animate.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
