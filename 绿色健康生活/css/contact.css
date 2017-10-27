@@ -1,0 +1,100 @@
+@import url("base.css");
+@import url("index.css");
+h1,h2,h3,h4,h5,h6{
+	padding:0 0;
+	margin:0 0;
+}
+p{
+	padding:0 0;
+	margin:0 0;
+}
+ul{
+	padding:0 0;
+	margin:0 0;	
+}
+body{
+	padding:0 0;
+	margin:0 0; 
+	font-family: 'OpenSans-Regular';
+	/*height: 5008px;*/
+}
+
+/*contact开始*/
+section.contact{
+	width: 100%;
+	height: 500px;
+	margin: 56px auto;
+}
+section.contact .contentC{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+section.contact .contentC h3{
+	text-align: center;
+	font-size: 40px;
+	color: #F9BD00;
+	margin-bottom: 42px;
+}
+section.contact .contentC .Communication{
+	width: 1200px;
+	height: 390px;
+}
+section.contact .contentC .Communication .left{
+	width: 570px;
+	height: 282px;
+	float: left;
+}
+section.contact .contentC .Communication .left > p{
+	color: #A69999;
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+section.contact .contentC .Communication .left > span{
+	color: #A69999;
+	font-size: 16px;
+}
+section.contact .contentC .Communication .right{
+	width: 570px;
+	height: 382px;
+	float: left;
+	margin-left: 30px;
+}
+section.contact .contentC .Communication .right form h5{
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 400px;
+	margin: 10px 0;
+}
+section.contact .contentC .Communication .right form input{
+	width: 100%;
+	outline: none;
+	box-sizing: border-box;
+    border: 1px solid #dcdee0;
+    padding: 10px 10px;
+}
+section.contact .contentC .Communication .right form textarea{
+	width: 100%;
+	height: 174px;
+	box-sizing: border-box;
+	padding: 10px 10px;
+	resize: none;
+    outline: none;
+    border: 1px solid #dcdee0;
+}
+section.contact .contentC .Communication .right form button{
+	width: 20%;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #372f2c;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+

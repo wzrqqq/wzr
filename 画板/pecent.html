@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="" width="300" height="300"></canvas>
+		
+		<script type="text/javascript">
+			let canvas = document.querySelector('canvas');
+			let ctx = canvas.getContext('2d');
+			/*
+				Math.PI * 2 / 100 * n
+				
+			*/
+			//let t = setInterval(fn,60,100);
+			let t;
+			let num = 1;
+			let n = 100;
+			fn();
+			
+			function fn(){
+				num++;
+				if (num == n) {
+					//clearInterval(t);
+					cancelAnimationFrame(t);
+				}else{
+					t = requestAnimationFrame(fn);
+				}
+				let rad = Math.PI / 50*num;
+				ctx.clearRect(0,0,300,300);
+				ctx.beginPath();
+				ctx.arc(150,150,100,-Math.PI/2,rad-Math.PI/2);
+				ctx.lineWidth = 10;
+				ctx.lineCap = 'round';
+				ctx.stroke();
+				
+				ctx.font = '20px sans-serif';
+				ctx.textAlign = 'center';
+				ctx.fillText(`${num}%`,150,150);
+			}
+			
+			
+			
+		
+		
+		
+		</script>
+	</body>
+</html>

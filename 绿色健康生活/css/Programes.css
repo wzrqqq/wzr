@@ -1,0 +1,148 @@
+@import url("base.css");
+@import url("index.css");
+h1,h2,h3,h4,h5,h6{
+	padding:0 0;
+	margin:0 0;
+}
+p{
+	padding:0 0;
+	margin:0 0;
+}
+ul{
+	padding:0 0;
+	margin:0 0;	
+	
+}
+body{
+	padding:0 0;
+	margin:0 0; 
+	font-family: 'OpenSans-Regular';
+	/*height: 5008px;*/
+}
+
+
+/*programes开始*/
+section.container{
+	width: 100%;
+	height: 960px;
+	margin: 56px 0;
+	/*position: relative;*/
+}
+section.container .contentC{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+section.container .contentC h3{
+	text-align: center;
+	font-size: 40px;
+	color: #F9BD00;
+	margin-bottom: 42px;
+}
+section.container .contentC .pictures{
+	width: 1200px;
+	height: 860px;
+	box-sizing: border-box;
+	padding: 0 30px;
+	/*position: relative;*/
+}
+section.container .contentC .pictures li{
+	width: 366px;
+	height: 274px;
+	float: left;
+	margin: 0 7px 14px 7px;
+	cursor: pointer;
+	position: relative;
+}
+section.container .contentC .pictures li a,img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+section.container .contentC .pictures li .zhe{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: .5s;
+}
+section.container .contentC .pictures li .zhe .anniu{
+	width: 50px;
+	height: 50px;
+	background: white;
+	margin: 120px auto;
+	box-sizing: border-box;
+	padding-top: 8px;
+	transform-style: preserve-3d;
+}
+section.container .contentC .pictures li .zhe .anniu > img{
+	display: block;
+	width: 35px;
+	height: 35px;
+	margin: 0 auto;
+}
+section.container .contentC .pictures li:hover .zhe{
+	opacity: 1;
+}
+section.container .contentC .pictures li:hover .anniu{
+	transform: rotateY(360deg);
+	transition: .8s;
+}
+section.container .mask{
+	width: 700px;
+	height: 600px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	box-shadow: 0 0 0 1000px rgba(0,0,0,0.8);
+	transform: scale(0,0);
+	transition: .5s;
+}
+section.container .contentC .mask > img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+section.container .contentC .mask .btnL{
+	width: 50px;
+	height: 50px;
+	background: url(../img/zuojiantou.png) no-repeat center;
+	position: absolute;
+	top: 0;
+	left: -75px;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+section.container .contentC .mask .btnR{
+	width: 50px;
+	height: 50px;
+	background: url(../img/youjiantou.png) no-repeat center;
+	position: absolute;
+	top: 0;
+	right: -75px;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+section.container .contentC .active{
+	transform: scale(1,1);
+}
+section.container .contentC .close{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #ccc url(../img/close.png)no-repeat center;
+	position: absolute;
+	top: -25px;
+	right: -25px;
+}
+
+

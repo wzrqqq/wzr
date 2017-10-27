@@ -1,0 +1,402 @@
+@import url("base.css");
+h1,h2,h3,h4,h5,h6{
+	padding:0 0;
+	margin:0 0;
+}
+p{
+	padding:0 0;
+	margin:0 0;
+}
+ul{
+	padding:0 0;
+	margin:0 0;	
+}
+body{
+	padding:0 0;
+	margin:0 0; 
+	font-family: 'OpenSans-Regular';
+	/*height: 5008px;*/
+}
+/*banner开始*/
+
+section.banner ul.images,section.banner{
+	width: 100%;
+	height: 600px;
+	position: relative;
+	overflow: hidden;
+}
+section.banner ul.images>li{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+section.banner ul.images .first{
+	left: 0;
+}
+section.banner ul.btns-list{
+	width: 100px;
+	height: 20px;
+	/*background: red;*/
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 3;
+	bottom: 10px;
+}
+section.banner ul.btns-list li{
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+	background: #372F2C;
+	border-radius: 50%;
+	border: 2px solid #ccc;
+	margin-right: 10px;
+	float: left;
+	cursor: pointer;
+}
+section.banner ul.btns-list li:first-of-type{
+	background: yellow;
+}
+
+
+
+/*banner结束*/
+
+/*nav开始*/
+nav{
+	width: 100%;
+	height: 108px;
+	background: #372F2C;
+	padding: 14px 0;
+	box-sizing: border-box;
+	position: relative;
+}
+nav .content{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+nav .content .logo{
+	float: left;
+}
+nav .content .logo a{
+	font-size: 58px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    display: block;
+    font-family: 'RacingSansOne-Regular';
+}
+nav .content .logo a span{
+	font-size: 30px;
+    text-transform: capitalize;
+    color: #f9bD00;
+}
+nav .content .top-menu{
+	width: 560px;
+	height: 68px;
+	float: right;
+	/*background: yellowgreen;*/
+}
+nav .content .top-menu .nav-list{
+	width: 100%;
+	height: 100%;
+}
+nav .content .top-menu .nav-list li{
+	width: 74px;
+	height: 100%;
+	float: left;
+	/*background: lavender;*/
+	margin: 0 19px;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 14px;
+}
+nav .content .top-menu .nav-list li:hover span{
+	transform: translateY(-2px);
+	color: #F9BD00;
+}
+nav .content .top-menu .nav-list li:hover i{
+	color: #F9BD00;
+}
+nav .content .top-menu .nav-list li a span{
+	display: block;
+	margin-top: 14px;
+	font-size: 16px;
+	color: white;
+	transition: .5s;
+}
+nav .content .top-menu .nav-list li a i{
+	font-size: 20px;
+	color: white;
+}
+/*lesson开始*/
+section.lesson{
+	width: 100%;
+	height: 700px;
+	background: #EEEEEE;
+	padding: 56px 0;
+}
+section.lesson .contentL{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+section.lesson .contentL h3{
+	font-size: 40px;
+    color: #f9bd00;
+    font-family: 'RacingSansOne-Regular';
+	text-align: center;
+	margin-bottom: 20px;
+}
+section.lesson .contentL .advertise{
+	width: 1200px;
+	height: 510px;
+	/*background: lavender;*/
+}
+section.lesson .contentL .advertise li{
+	width: 380px;
+	height: 100%;
+	background: white;
+	float: left;
+	box-sizing: border-box;
+	margin: 0 10px;
+	border: 1px solid #C4CDCC;
+	
+}
+section.lesson .contentL .advertise li .imgbao{
+	width: 100%;
+	height: 261px;
+	overflow: hidden;
+}
+section.lesson .contentL .advertise li img{
+	width: 100%;
+	height: 100%;
+	transition: .5s;
+}
+section.lesson .contentL .advertise li h4{
+	text-align: center;
+	font-size: 20px;
+    margin: 10px 0;
+    font-family: 'RacingSansOne-Regular';
+    color: #372f2c;
+}
+section.lesson .contentL .advertise li p{
+	text-align: center;
+	line-height: 30px;
+	color: #B39999;
+	padding: 8px 20px;
+}
+section.lesson .contentL .advertise li a{
+	display: block;
+	width: 90px;
+	height: 33px;
+	background: #372f2c;
+	text-align: center;
+	line-height: 33px;
+	color: white;
+	box-sizing: border-box;
+	margin: 8px auto;
+}
+section.lesson .contentL .advertise li a:hover{
+	background: #F9BD00;
+}
+
+
+/*services开始*/
+section.services{
+	width: 100%;
+	height: 400px;
+	background: #FFFFFF;
+	box-sizing: border-box;
+	padding: 56px 0;
+}
+section.services .contentS{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	/*background: silver;*/
+}
+section.services .contentS h3{
+	text-align: center;
+	font-size: 36px;
+    color: #f9bd00;
+    font-family: 'RacingSansOne-Regular';
+    margin-bottom: 25px;
+}
+section.services .contentS .service-list{
+	width: 100%;
+	height: 240px;
+	/*background: forestgreen;*/
+}
+section.services .contentS .service-list li{
+	width: 270px;
+	height: 100%;
+	float: left;
+	margin: 0 15px;
+	/*background: violet;*/
+}
+section.services .contentS .service-list li .circle{
+	display: block;
+	width: 88px;
+	height: 88px;
+	border: 2px solid black;
+	border-radius: 50%;
+	margin: 10px auto;
+	text-align: center;
+	line-height: 88px;
+}
+
+section.services .contentS .service-list li .circle i{
+	font-size: 40px;
+}
+section.services .contentS .service-list li h4{
+	text-align: center;
+	font-size: 20px;
+}
+section.services .contentS .service-list li p{
+	text-align: center;
+	font-size: 14px;
+	color: #9999B3;
+}
+
+
+
+/*picture开始*/
+section.picture{
+	width: 100%;
+	height: 465px;
+	text-align: center;
+    background: url(../img/banner1.jpg) no-repeat 0px 0px;
+    background-attachment: fixed;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 56px 0;
+    position: relative;
+}
+section.picture .contentP{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	/*position: absolute;*/
+	/*background: forestgreen;*/
+}
+section.picture .contentP h3{
+	text-align: center;
+	font-size: 40px;
+    color: #fff;
+    font-family: 'RacingSansOne-Regular';
+}
+section.picture .contentP .item{
+	width: 850px;
+	height: 141px;
+	/*background: lavender;*/
+	margin: 50px auto;
+	box-sizing: border-box;
+	padding: 20px 0;
+}
+section.picture .contentP img{
+	display: block;
+	width: 111px;
+	height: 104px;
+	float: left;
+	margin-right: 30px;
+}
+section.picture .contentP p{
+	text-align: left;
+	line-height: 32px;
+	color: white;
+}
+
+
+
+/*news开始*/
+section.news{
+	width: 100%;
+	height: 714px;
+	background: white;
+	padding: 56px 0;
+	box-sizing: border-box;
+}
+section.news .contentN{
+	width: 1200px;
+	height: 100%;
+	/*background: aqua;*/
+	margin: 0 auto;
+}
+section.news .contentN h4{
+	text-align: center;
+	font-size: 38px;
+	color: #F9BD00;
+	margin-bottom: 30px;
+}
+section.news .contentN .news-list{
+	width: 100%;
+	height: 514px;
+	/*background: salmon;*/
+}
+section.news .contentN .news-list li{
+	width: 280px;
+	height: 100%;
+	/*background: forestgreen;*/
+	float: left;
+	margin: 0 10px;
+}
+section.news .contentN .news-list li img{
+	display: block;
+	width: 280px;
+	height: 320px;
+}
+section.news .contentN .news-list li h4{
+	font-size: 20px;
+	margin-top: 10px;
+}
+section.news .contentN .news-list li p{
+	font-size: 16px;
+    color: #999;
+    line-height: 28px;
+    text-align: center;
+
+}
+
+
+/*footer开始*/
+footer{
+	width: 100%;
+	height: 312px;
+	background: #EEEEEE;
+	box-sizing: border-box;
+	padding: 56px 0;
+}
+footer .contentF{
+	width: 1200px;
+	height: 200px;
+	/*background: darkgrey;*/
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 0 200px;
+}
+footer .contentF h3{
+	text-align: center;
+	font-size: 40px;
+	color: #F9BD00;
+	margin-bottom: 24px;
+}
+footer .contentF .message{
+	width: 300px;
+	height: 120px;
+	/*background: salmon;*/
+	float: left;
+}
+footer .contentF .message li{
+	margin: 5px 8px;
+	color: #999999;
+}
+footer .contentF img{
+	display: block;
+	width: 112px;
+	height: 112px;
+}

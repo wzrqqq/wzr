@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="" width="300" height="300"></canvas>
+		<script type="text/javascript">
+			let canvas = document.querySelector('canvas');
+			let ctx = canvas.getContext('2d');
+			
+			let t  = setInterval(fn,60,90);
+			let num = 1;
+			
+			function fn(n){
+				num++;
+				if (num == n) {
+					clearInterval(t);
+				}
+				let rad = Math.PI*2 / 100*num;
+				ctx.clearRect(0,0,300,300);
+				ctx.beginPath();
+				ctx.arc(canvas.width/2,canvas.height/2,100,-Math.PI/2,rad-Math.PI/2);
+				ctx.lineWidth = 10;
+				ctx.lineCap = 'round';
+				ctx.stroke();
+				
+				ctx.font = '20px sans-serif';
+				ctx.textAlign = 'center';
+				ctx.fillText(`${num}%`,150,150);
+				
+			}
+			
+			
+		
+		
+			
+			
+			font(){
+				let that = this; 
+				this.opacity.onmousedown = function(e){
+					that.opacity.onmousedown = null;
+					let cx = e.offsetX , cy = e.offsetY;
+					let divs = document.createElement('div');
+					divs.contentEditable = true;
+					divs.style.cssText = `
+						width:100px;
+						height:50px;
+						border:1px dashed #ccc;
+						position:absolute;
+						left:${cx}px;
+						top:${cy}px;
+						cursor:move;
+					`;
+					this.appendChild(divs);
+					
+					/*拖拽*/
+					divs.onmousedown = function(e){
+						let cx = e.clientX , cy = e.clientY;
+						let left = divs.offsetLeft , top = divs.offsetTop;
+						that.opacity.onmousemove = function(e){
+							let ox = e.clientX , oy = e.clientY;
+							let lefts = left + ox-cx,
+								tops = top + oy-cy;
+							divs.style.left = `${lefts}px`;
+							divs.style.top = `${tops}px`;
+						}
+						
+					}
+					
+					
+					divs.onblur = function(){
+						let value = this.innerText;
+						that.opacity.removeChild(divs);
+						that.ctx.font = 'bold 20px sans-serif';
+						that.ctx.fillText(value,cx,cy);
+					}
+				}
+				
+			}
+			
+			//裁切
+			clip(obj){
+				let that = this;
+				let minX,minY,w,h;
+				this.opacity.onmousedown = function(e){
+					let cx = e.offsetX , cy = e.offsetY;
+					obj.style.display = 'block';
+					obj.style.width = 0;
+					obj.style.height = 0;
+					that.opacity.onmouseup = function(e){
+						let ox = e.offsetX , oy = e.offsetY;
+						w = Math.abs(ox-cx);
+						h = Math.abs(oy-cy);
+						minX = ox >= cx ? cx : ox;
+						minY = oy >= cy ? cy : oy;
+						obj.style.left = `${minX}px`;
+						obj.style.top = `${minY}px`;
+						obj.style.width = `${w}px`;
+						obj.style.height = `${h}px`;
+				
+					}
+					that.opacity.onmouseup = function(){
+						that.temp = that.ctx.getImageData(minX,minY,w,h);
+						that.ctx.clearRect(minX,minY,w,h);
+						that.history.push(that.ctx.getImageData(0,0,that.cw,that.ch));
+						that.ctx.getImageData(that.temp,minX,minY);
+						obj.style.display = 'none';
+						that.opacity.onmousedown = null;
+						that.opacity.onmouseup = null;
+						that.drag(minX,minY,obj);
+					}
+				}							
+			}
+			drag(x,y,obj){
+				let that = this;
+				this.opacity.onmousedown = function(e){
+					let cx = e.offsetX , cy = e.offsetY;
+					that.opacity.onmouseup = function(e){
+						let ox = e.offsetX , oy = e.offsetY;
+						let lefts = x + ox-cx,
+							tops = y + oy-cy;
+						obj.style.left = `${lefts}px`;
+						obj.style.top = `${tops}px`;
+						
+					}
+					
+				}
+				
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

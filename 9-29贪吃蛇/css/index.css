@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.sence{
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -300px;
+	margin-left: -300px;
+	background: #000;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+.block{
+	width: 29px;
+	height: 29px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	float: left;
+	background: pink;
+}
+.hot{
+	background: greenyellow!important;
+}
+.score,.begin,.end{
+	width: 80px;
+	height: 30px;
+	background: skyblue;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	line-height: 30px;
+}
+.begin{
+	left: 300px;
+}
+.end{
+	left: -300px;
+}

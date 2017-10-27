@@ -1,0 +1,163 @@
+@import url("base.css");
+@import url("index.css");
+h1,h2,h3,h4,h5,h6{
+	padding:0 0;
+	margin:0 0;
+}
+p{
+	padding:0 0;
+	margin:0 0;
+}
+ul{
+	padding:0 0;
+	margin:0 0;	
+}
+body{
+	padding:0 0;
+	margin:0 0; 
+	font-family: 'OpenSans-Regular';
+	/*height: 5008px;*/
+}
+
+
+
+/*content开始*/
+section.content{
+	width: 100%;
+	height: 750px;
+	box-sizing: border-box;
+	padding: 56px 0;
+}
+section.content .container{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+section.content .container .import{
+	width: 100%;
+	height: 100%;
+}
+section.content .container .import li{
+	width: 370px;
+	height: 636px;
+	float: left;
+	box-sizing: border-box;
+	margin: 0 15px;
+}
+section.content .container .import li .top{
+	width: 350px;
+	height: 120px;
+	margin-bottom: 20px;
+}
+section.content .container .import li .top h3{
+	text-align: center;
+	color: #F9BD00;
+	font-size: 38px;
+}
+section.content .container .import li .top>p{
+	text-align: center;
+	color: #555555;
+	font-size: 16px;
+	line-height: 26px;
+}
+section.content .container .import li img{
+	display: block;
+	width: 330px;
+	height: 300px;
+}
+section.content .container .import li h4{
+	font-size: 18px;
+	margin: 10px 0;
+}
+section.content .container .import li > p{
+	color: #A69999;
+	font-size: 14px;
+	line-height: 24px;
+}
+section.content .container .import li .middle h4{
+	font-size: 18px;
+    color: #372f2c;
+    margin: 10px 0;
+    font-family: 'RacingSansOne-Regular';
+}
+section.content .container .import li .middle>p{
+	color: #A69999;
+	line-height: 22px;
+	font-size: 14px;
+}
+section.content .container .import li .photo{
+	width: 350px;
+	height: 466px;
+}
+section.content .container .import li .photo>a{
+	display: block;
+	width: 145px;
+	height: 136px;
+	float: left;
+	margin: 0 15px 15px 15px;
+}
+section.content .container .import li .photo>a>img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	
+}
+
+
+/*advantages开始*/
+section.advantage{
+	width: 100%;
+	height: 264px;
+	box-sizing: border-box;
+	padding: 14px 0 56px 0;
+}
+section.advantage .contentA{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+section.advantage .contentA h3{
+	text-align: center;
+	font-size: 40px;
+	color: #F9BD00;
+}
+section.advantage .contentA .you{
+	width: 1200px;
+	height: 120px;
+	margin-top: 32px;
+}
+section.advantage .contentA .you li{
+	width: 370px;
+	height: 120px;
+	float: left;
+	margin: 0 15px;
+}
+section.advantage .contentA .you li .circle{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: #ECECEC;
+	margin-right: 8px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 18px;
+	color: #F9BD00;
+	float: left;
+}
+section.advantage .contentA .you li .circleR{
+	width: 270px;
+	height: 120px;
+	float: left;
+}
+section.advantage .contentA .you li .circleR > h4{
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+section.advantage .contentA .you li .circleR > p{
+	font-size: 14px;
+	color: #CCCCCC;
+	text-align: center;
+	line-height: 24px;
+}
+
